@@ -1,0 +1,54 @@
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using DMS.Models;
+@inject IViewLocalizer Localizer;
+
+@model DMS.Models.PassChangeModel
+
+@{
+    ViewBag.title = Localizer["ChangePass"];
+}
+
+<h4>@Localizer["Account"] -> @Localizer["ChangePass"]</h4>
+
+<div class="rounded-10 p-2 div-br-color">
+    <br>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" enctype="multipart/form-data" asp-controller="Folders" asp-action="Edit" asp-route-parentId="@ViewBag.parentId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="form-group">
+                    <label for="Password" class="control-label">@Localizer["Password"]</label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="NewPassword" class="control-label">@Localizer["NewPassword"]</label>
+                    <input asp-for="NewPassword" class="form-control" />
+                    <span asp-validation-for="NewPassword" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="ConfPassword" class="control-label">@Localizer["ConfPassword"]</label>
+                    <input asp-for="ConfPassword" class="form-control" />
+                    <span asp-validation-for="ConfPassword" class="text-danger"></span>
+                </div>
+
+            <br>
+
+            <div class="form-group">
+                    <a asp-action="Index" asp-controller="Home">
+                <button type="button" class="btn btn-secondary">@Localizer["Return"]</button></a>
+                    <input type="submit" value="@Localizer["Update"]" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+</div>

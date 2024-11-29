@@ -1,0 +1,218 @@
+msgid "DemoDMS"
+msgstr "DMS"
+
+msgid "Documents"
+msgstr "Documents"
+
+msgid "Document"
+msgstr "Document"
+
+msgid "Home Page"
+msgstr "Home"
+
+msgid "Document Managment System"
+msgstr "Document Managment System (DMS)"
+
+msgid "A system made for storing, editing, searching and downloading files"
+msgstr "A system made for storing, editing, searching and downloading files"
+
+msgid "By: Sonali Bank ITD"
+msgstr "Developed By: Sonali Bank ITD"
+
+msgid "Edit and Download"
+msgstr "Edit and Download"
+
+msgid "Edit and view files and document data with just a few clicks. Using the action buttons you can easily delete or download any document."
+msgstr "Edit and view files and document data with just a few clicks. Using the action buttons you can easily delete or download any document."
+
+msgid "Keep Your Files Organized"
+msgstr "Keep Your Files Organized"
+
+msgid "Electronic document storage increases productivity and security, while reducing costs and human error. Using a DMS can improve file accessibility and keeps everything nice and tidy."
+msgstr "Electronic document storage increases productivity and security, while reducing costs and human error. Using a DMS can improve file accessibility and keeps everything nice and tidy."
+
+msgid "Search and Sort"
+msgstr "Search and Sort"
+
+msgid "Search through files to increase accessibility. Click any column to sort all documents by that paramater. You can sort both in ascending and descending order."
+msgstr "Search through files to increase accessibility. Click any column to sort all documents by that paramater. You can sort both in ascending and descending order."
+
+msgid "View Documents"
+msgstr "View Documents"
+
+msgid "Index"
+msgstr "View Documents"
+
+msgid "Edit"
+msgstr "Edit Documents"
+
+msgid "Save"
+msgstr "Save Documents"
+
+msgid "Delete"
+msgstr "Delete Documents"
+
+msgid "Are you sure you want to delete this?"
+msgstr "Are you sure you want to delete this?"
+
+msgid "Details"
+msgstr "Details"
+
+msgid "Create"
+msgstr "Create"
+
+msgid "Download"
+msgstr "Download"
+
+msgid "Return"
+msgstr "Return"
+
+msgid "Create New"
+msgstr "Create New"
+
+msgid "Actions"
+msgstr "Actions‌"
+
+msgid "Search"
+msgstr "Search"
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Extension"
+msgstr "Extension"
+
+msgid "UserName"
+msgstr "UserName"
+
+msgid "User Name"
+msgstr "User Name"
+
+msgid "Category"
+msgstr "Category"
+
+msgid "DateUpload"
+msgstr "DateUpload"
+
+msgid "Date Upload"
+msgstr "Date Upload"
+
+msgid "DateCreated"
+msgstr "DateCreated"
+
+msgid "Date Created"
+msgstr "Date Created"
+
+msgid "DateModified"
+msgstr "DateModified"
+
+msgid "Date Modified"
+msgstr "Date Modified"
+
+msgid "Size"
+msgstr "Size"
+
+msgid "File"
+msgstr "File"
+
+msgid "FileType"
+msgstr "FileType"
+
+msgid "File Type"
+msgstr "File Type"
+
+msgid "FilePath"
+msgstr "FilePath"
+
+msgid "File Path"
+msgstr "File Path"
+
+msgid "Management"
+msgstr "Management"
+
+msgid "Financial"
+msgstr "Financial"
+
+msgid "General"
+msgstr "General"
+
+msgid "Security"
+msgstr "Security"
+
+msgid "AuthorName"
+msgstr "PreperedBy"
+
+msgid "Author Name"
+msgstr "Prepered By"
+
+msgid "SupervisorName"
+msgstr "SupervisedBy"
+
+msgid "Supervisor Name"
+msgstr "Supervised By"
+
+msgid "Level"
+msgstr "Level"
+
+msgid "Department"
+msgstr "Department"
+
+msgid "Faculty"
+msgstr "Division"
+
+msgid "PublicationDate"
+msgstr "PreperedDate"
+
+msgid "Publication Date"
+msgstr "Prepered Date"
+
+msgid "Folder"
+msgstr "Folder"
+
+msgid "Folders"
+msgstr "Folders"
+
+msgid "New Folder"
+msgstr "New Folder"
+
+msgid "New Document"
+msgstr "New Document"
+
+msgid "Login"
+msgstr "Login"
+
+msgid "Account"
+msgstr "Account"
+
+msgid "ChangePass"
+msgstr "Password"
+
+msgid "Password"
+msgstr "Password"
+
+
+msgid "NewPassword"
+msgstr "New Password"
+
+
+msgid "ConfPassword"
+msgstr "Conf. Password"
+
+msgid "Update"
+msgstr "Update"
+
+
+msgid "FoldIndex"
+msgstr "View Folder & File"
+
+msgid "FoldEdit"
+msgstr "Edit Folder"
+
+msgid "FoldSave"
+msgstr "Save Folder"
+
+msgid "FoldDelete"
+msgstr "Delete Folder"
+
+msgid "Help"
+msgstr "Help"

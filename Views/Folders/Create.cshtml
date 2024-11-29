@@ -1,0 +1,47 @@
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using DMS.Models;
+@inject IViewLocalizer Localizer;
+
+@model DMS.Models.Folder
+
+@{
+    ViewBag.title = Localizer["Create"];
+}
+
+<h4>@Localizer["Create"] -> @Localizer["Folder"]</h4>
+
+<div class="rounded-10 p-2 div-br-color">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" asp-route-parentId="@ViewBag.parentId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label">@Localizer["Name"]</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Faculty" class="control-label">@Localizer["Faculty"]</label>
+                    <select asp-for="Faculty" asp-items="@Html.GetEnumSelectList<Faculty>()" class="form-control"></select>
+                    <span asp-validation-for="Faculty" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Department" class="control-label">@Localizer["Department"]</label>
+                    <select asp-for="Department" asp-items="@Html.GetEnumSelectList<Department>()" class="form-control"></select>
+                    <span asp-validation-for="Department" class="text-danger"></span>
+                </div>
+
+            <div class="form-group">
+                <a asp-action="Index" asp-route-id="@ViewBag.parentId">
+                    <button type="button" class="btn btn-secondary">@Localizer["Return"]</button></a>
+                <input type="submit" value="@Localizer["Create"]" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+</div>

@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@inject IViewLocalizer Localizer;
+@model ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+    var errordata = ViewData["error"] as string;
+}
+
+<div class="rounded-10 p-2 div-br-color">
+    <br>
+
+<h1 class="text-danger">Error.</h1>
+<h2 class="text-danger">An error occurred while processing your request.</h2>
+
+<h4>Deails</h4>
+<p>
+    Path @errordata is not accessable ! please contact with administrator
+</p>
+ <p>
+        <a asp-action="Index" asp-controller="Home">
+            <button type="button" class="btn btn-secondary">@Localizer["Return"]</button>
+        </a>
+ </p>
+
+</div>

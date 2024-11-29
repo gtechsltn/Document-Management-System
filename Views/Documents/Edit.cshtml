@@ -1,0 +1,80 @@
+@using Microsoft.AspNetCore.Mvc.Localization;
+@using DMS.Models;
+@inject IViewLocalizer Localizer;
+
+@model DMS.Models.Document
+
+@{
+    ViewBag.title = Localizer["Edit"];
+}
+
+<h4>@Localizer["Document"] -> @Localizer["Edit"]</h4>
+
+
+<div class="rounded-10 p-2 div-br-color">
+    <br/>
+    <div>
+        <form method="post" enctype="multipart/form-data" asp-controller="Documents" asp-action="Edit" asp-route-parentId="@ViewBag.parentId">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+           <div class="row">
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="Name" class="control-label">@Localizer["Name"]</label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="AuthorName" class="control-label">@Localizer["Author Name"]</label>
+                    <input asp-for="AuthorName" class="form-control" />
+                    <span asp-validation-for="AuthorName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="SupervisorName" class="control-label">@Localizer["Supervisor Name"]</label>
+                    <input asp-for="SupervisorName" class="form-control" />
+                    <span asp-validation-for="SupervisorName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Level" class="control-label">@Localizer["Level"]</label>
+                    <input asp-for="Level" class="form-control" />
+                    <span asp-validation-for="Level" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="form-group">
+                    <label for="Department" class="control-label">@Localizer["Department"]</label>
+                    <input asp-for="Department" class="form-control" />
+                    <span asp-validation-for="Department" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Faculty" class="control-label">@Localizer["Faculty"]</label>
+                    <input asp-for="Faculty" class="form-control" />
+                    <span asp-validation-for="Faculty" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="PublicationDate" class="control-label">@Localizer["Publication Date"]</label>
+                    <input asp-for="PublicationDate" class="form-control" />
+                    <span asp-validation-for="PublicationDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="FilePath" class="control-label">@Localizer["File Path"]</label>
+                    <input asp-for="FilePath" type="file" name="files" class="form-control" />
+                    <span asp-validation-for="FilePath" class="text-danger"></span>
+                </div>
+
+                  <br>
+                <div class="form-group">
+                        <a asp-controller="Folders" asp-action="Index" asp-route-id="@ViewBag.parentId"><button type="button" class="btn btn-secondary">@Localizer["Return"]</button></a>
+                        <input type="submit" value="@Localizer["Update"]" class="btn btn-primary" />
+                </div>
+             </div>
+          </div>          
+        </form>
+     </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
+</div>

@@ -1,0 +1,87 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+@using Newtonsoft.Json
+@model dynamic
+
+
+@inject IViewLocalizer Localizer
+
+@{
+    var userInfo = ViewData["UserInfo"] as UserInfo;
+ 
+}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltl">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - @Localizer["DemoDMS"]</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.rtl.min.css" integrity="sha384-gXt9imSW0VcJVHezoNQsP+TNrjYXoGcrqBZJpry9zJt8PCQjobwmhMGaDHTASo9N" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/DMS.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/gh/tofsjonas/sortable/sortable.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/gh/tofsjonas/sortable/sortable.min.js"></script>
+
+    <script src="https://kit.fontawesome.com/b43a18ece3.js" crossorigin="anonymous"></script>
+</head>
+<body class="home-page-bg">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light nav-bg-color border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand  text-success" asp-area="" asp-controller="Home" asp-action="Index">@Localizer["Document Managment System"]</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between col-lg-3">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Folders" asp-action="Index" asp-route-id="0">@Localizer["Folders"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Documents" asp-action="Index">@Localizer["Documents"]</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Help">@Localizer["Help"]</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse d-sm-inline-flex col-lg-3 grid-right">
+                <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Details"> @userInfo.Username (@userInfo.Department, @userInfo.Division )</a>
+
+            </div>
+            <div class="navbar-collapse collapse d-sm-inline-flex col-lg-2 grid-right">
+                <ul class="navbar-nav flex-grow-1">
+                    @* <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Details"> @userInfo.Username</a>
+                    </li> *@
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="ChangePass">@Localizer["ChangePass"]</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" asp-area="" asp-controller="Account" asp-action="Logout">@Localizer["Logout"]</a>
+                    </li>
+                </ul>
+            </div>           
+           
+        </nav>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-1">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted nav-bg-color">
+        <div class="container">
+            @Localizer["By: Sonali Bank ITD"] - @Localizer["DemoDMS"] &copy;2024
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

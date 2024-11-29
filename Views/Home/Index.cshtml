@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Mvc.Localization;
+@inject IViewLocalizer Localizer;
+
+@{
+    ViewData["Title"] = Localizer["Home Page"];
+}
+<div class="rounded-10 p-2 div-br-color h-100">
+    <div class="text-center rounded-4">
+        <img src="/homepage-bannar.jpg" alt="Banner Image" class="banner-image" />
+</div>
+<br/>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+     <div class="card h-100 div-br-radius">
+      <a asp-controller="Folders" asp-action="Index">
+      <center><i class="fas fa-folder fa-6x" style="margin:10px; color: orange"></i></center>
+      <div class="card-body">
+       <h5 class="card-title">@Localizer["View Folders"]</h5>
+        <p class="card-text">@Localizer["Edit and view files and document data with just a few clicks. Using the action buttons you can easily delete or download any document."]</p>
+      </div>
+      </a>
+    </div>
+  </div>
+  <div class="col">
+    <div class="card h-100 div-br-radius">
+      <a asp-controller="Documents" asp-action="Index">
+      <center><i class="fas fa-file fa-6x" style="margin:10px; color: DarkSlateGrey"></i></center>
+      <div class="card-body">
+        <h5 class="card-title">@Localizer["Keep Your Files Organized"]</h5>
+        <p class="card-text">@Localizer["Electronic document storage increases productivity and security, while reducing costs and human error. Using a DMS can improve file accessibility and keeps everything nice and tidy."]</p>
+      </div>
+      </a>
+    </div>
+  </div>
+  <div class="col">
+     <div class="card h-100 div-br-radius">
+      <a asp-controller="Documents" asp-action="Index">
+      <center><i class="fas fa-search fa-6x" style="margin:10px; color: DodgerBlue"></i></center>
+      <div class="card-body">
+        <h5 class="card-title">@Localizer["Search and Sort"]</h5>
+        <p class="card-text">@Localizer["Search through files to increase accessibility. Click any column to sort all documents by that paramater. You can sort both in ascending and descending order."]</p>
+      </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+</div>
