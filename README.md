@@ -33,6 +33,12 @@ This project is lightweight and use full of your document management system. it 
  dotnet ef migrations add MigrationName
  dotnet ef database update
 
+# Login
+
+U/P: admin/admin (Admin)
+
+U/P: admin/123 (Super Admin)
+
 
 
 
